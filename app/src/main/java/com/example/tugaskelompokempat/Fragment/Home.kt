@@ -1,14 +1,16 @@
-package com.example.tugaskelompokempat
+package com.example.tugaskelompokempat.Fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil.setContentView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.tugaskelompokempat.Adapter.FilmAdapter
+import com.example.tugaskelompokempat.Data.ListFilm
+import com.example.tugaskelompokempat.ViewModel.FilmViewModel
 import com.example.tugaskelompokempat.databinding.FragmentHomeBinding
 
 
@@ -21,7 +23,7 @@ class Home : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater)
         return binding.root
     }
