@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
             name="filmData"
-            type="com.example.tugaskelompokempat.Data.ListFilm" />
+            type="com.example.tugaskelompokempat.ListFilm" />
     </data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardFilm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -26,7 +26,7 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/img"
-
+                app:setImageResource="@{filmData.img}"
                 android:layout_marginTop="10dp"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -36,7 +36,7 @@
 
             <TextView
                 android:id="@+id/nama"
-
+                android:text="@{filmData.nama}"
                 android:gravity="center"
                 android:textAlignment="center"
                 android:lines="2"

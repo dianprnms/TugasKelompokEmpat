@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.tugaskelompokempat.Adapter.FilmAdapter
-import com.example.tugaskelompokempat.Data.ListFilm
+import com.example.tugaskelompokempat.ListFilm
 import com.example.tugaskelompokempat.ViewModel.FilmViewModel
 import com.example.tugaskelompokempat.databinding.FragmentHomeBinding
 
@@ -24,7 +24,7 @@ class Home : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 

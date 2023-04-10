@@ -18,5 +18,14 @@
         android:id="@+id/home2"
         android:name="com.example.tugaskelompokempat.Fragment.Home"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_filmDetail"
+            app:destination="@id/filmDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmDetail"
+        android:name="com.example.tugaskelompokempat.Fragment.FilmDetail"
+        android:label="fragment_film_detail"
+        tools:layout="@layout/fragment_film_detail" />
 </navigation>

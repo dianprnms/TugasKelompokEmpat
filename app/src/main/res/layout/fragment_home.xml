@@ -6,6 +6,16 @@
     android:padding="15dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.Home">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/home"
+        android:text="HOME"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.imageview.ShapeableImageView
         android:src="@drawable/user"
@@ -17,7 +27,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingHorizontal="10dp"
         android:paddingVertical="35dp">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvHome"
