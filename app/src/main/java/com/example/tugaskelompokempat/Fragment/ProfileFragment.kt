@@ -7,27 +7,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.tugaskelompokempat.R
-import com.example.tugaskelompokempat.databinding.FragmentLoginBinding
+import com.example.tugaskelompokempat.databinding.FragmentProfileBinding
 
-class Login : Fragment() {
-    lateinit var binding: FragmentLoginBinding
-
+class ProfileFragment : Fragment() {
+     lateinit var binding : FragmentProfileBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ):
-            View {
-        // Inflate the layout for this fragment
-        binding= FragmentLoginBinding.inflate(inflater, container, false)
+    ): View {
+        binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.loginbutton.setOnClickListener{
-            val bundle = Bundle()
-            bundle.putString("Username", binding.UsernameLogin.text.toString())
-            findNavController().navigate(R.id.action_login_to_home2, bundle)
+
+        val getName = arguments?.getString("Username")
+        binding.tvTampilUsername.text = getName
+
+            binding.btnLogout.setOnClickListener{
+                findNavController().navigate(R.id.action_profileFragment_to_login)
+            }
         }
     }
-}

@@ -22,10 +22,21 @@
         <action
             android:id="@+id/action_home2_to_filmDetail"
             app:destination="@id/filmDetail" />
+        <action
+            android:id="@+id/action_home2_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/filmDetail"
         android:name="com.example.tugaskelompokempat.Fragment.FilmDetail"
         android:label="fragment_film_detail"
         tools:layout="@layout/fragment_film_detail" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.tugaskelompokempat.Fragment.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
 </navigation>
