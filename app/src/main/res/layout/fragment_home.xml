@@ -6,6 +6,7 @@
     android:padding="15dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.Home">
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/home"
         android:text="HOME"
@@ -18,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iconUser3"
         android:src="@drawable/user"
         android:layout_width="30dp"
         android:layout_height="30dp"

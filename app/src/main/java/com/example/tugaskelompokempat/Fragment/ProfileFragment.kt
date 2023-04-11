@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.example.tugaskelompokempat.R
 import com.example.tugaskelompokempat.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
@@ -23,8 +25,8 @@ class ProfileFragment : Fragment() {
         val getName = arguments?.getString("Name")
         binding.tvTampilUsername.setText(getName)
 
-        val btnLogout = binding.btnLogout
-        btnLogout.setOnClickListener {
+            binding.btnLogout.setOnClickListener{
+                findNavController().navigate(R.id.action_profileFragment_to_login)
+            }
         }
     }
-}
